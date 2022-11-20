@@ -66,10 +66,10 @@ public class Config {
 
         controllerMaxRF = SERVER_BUILDER
                 .comment("Maximum RF the controller can store")
-                .defineInRange("controllerMaxRF", 100000, 1, 1000000000);
+                .defineInRange("controllerMaxRF", 1000000, 1, 1000000000);
         controllerRfPerTick = SERVER_BUILDER
                 .comment("Maximum RF the controller can receive per tick")
-                .defineInRange("controllerRfPerTick", 1000, 1, 1000000000);
+                .defineInRange("controllerRfPerTick", 10000, 1, 1000000000);
         wirelessRouterMaxRF = SERVER_BUILDER
                 .comment("Maximum RF the wireless router can store")
                 .defineInRange("wirelessRouterMaxRF", 100000, 1, 1000000000);
@@ -95,16 +95,16 @@ public class Config {
                 .defineInRange("maxRfAdvancedConnector", 500000, 1, 1000000000);
         maxRfRateNormal = SERVER_BUILDER
                 .comment("Maximum RF/rate that a normal connector can input or output")
-                .defineInRange("maxRfRateNormal", 10000, 1, 1000000000);
+                .defineInRange("maxRfRateNormal", 5000000, 1, 1000000000);
         maxRfRateAdvanced = SERVER_BUILDER
                 .comment("Maximum RF/rate that an advanced connector can input or output")
-                .defineInRange("maxRfRateAdvanced", 100000, 1, 1000000000);
+                .defineInRange("maxRfRateAdvanced", 100000000, 1, 1000000000);
         maxFluidRateNormal = SERVER_BUILDER
                 .comment("Maximum fluid per operation that a normal connector can input or output")
-                .defineInRange("maxFluidRateNormal", 1000, 1, 1000000000);
+                .defineInRange("maxFluidRateNormal", 320000, 1, 1000000000);
         maxFluidRateAdvanced = SERVER_BUILDER
                 .comment("Maximum fluid per operation that an advanced connector can input or output")
-                .defineInRange("maxFluidRateAdvanced", 5000, 1, 1000000000);
+                .defineInRange("maxFluidRateAdvanced", 640000, 1, 1000000000);
 
         maxPublishedChannels = SERVER_BUILDER
                 .comment("Maximum number of published channels that a routing channel can support")
